@@ -1,0 +1,37 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glow-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff0000ff"/>
+      <stop offset="50%" stop-color="#ffcc00ff"/>
+      <stop offset="100%" stop-color="#ff9500ff"/>
+    </linearGradient>
+  </defs>
+
+  <circle class="glow-stroke" cx="32" cy="32" r="30" stroke="url(#glow-dark)" stroke-width="3" fill="none"/>
+
+  <g id="spin">
+    <text x="32" y="36" text-anchor="middle" dominant-baseline="middle"
+      font-family="Segoe UI, sans-serif" font-size="32" font-weight="bold"
+      class="glow-fill">Tx</text>
+  </g>
+
+  <style>
+    #spin {
+      transform-origin: 32px 32px;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .glow-stroke {
+      stroke: url(#glow-dark);
+    }
+
+    .glow-fill {
+      fill: url(#glow-dark);
+    }
+  </style>
+</svg>
